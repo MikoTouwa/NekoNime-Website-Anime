@@ -1,0 +1,509 @@
+/* Importing font 'Poppins' from Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: rgb(22, 22, 22);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/**/
+header {
+    position: relative;
+    width: 80%;
+    height: 90%;
+    /*border: 1px solid white;*/
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px -8px #000;
+}
+
+/* Giving background to header*/
+header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* center center means the image will be centered both horizontally and vertically */
+    /* "/cover" is a shorthand property to size the image so that it covers the entire container while maintaining its aspect ratio*/
+    background: url(./img/money\ heist1.jpg)no-repeat center center/cover; 
+    opacity: .9;
+    /* z-index set to -1 so that the content remains over the background*/
+    z-index: -1;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Applying slightly black shades to */
+    background: linear-gradient(180deg, transparent, black); 
+    z-index: -1;
+}
+
+/* Styling the position of the Video playing in background to fit in the header container*/
+header video {
+    position: absolute;
+    width: 149%;
+    height: 185%;
+    top: -43%;
+    left: -24%;
+    z-index: -1;
+}
+
+/* Styling the navbar */
+header nav {
+    width: 100%;
+    height: 10%;
+    /*border: 1px solid white;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 0% for top and bottom and 50px for left and right */
+    padding: 0% 50px;
+}
+
+header nav .logo_ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling the logo*/
+header nav .logo_ul img {
+    width: 90px;
+}
+
+/* Styling Unordered list*/
+header nav .logo_ul ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+/* Styling list items */
+header nav .logo_ul ul li {
+    padding: 3px 15px;
+}
+
+/* Styling anchor tags, anchor tags have 'Hover' effect */
+header nav .logo_ul ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    transition: .3s linear;
+}
+
+header nav .logo_ul ul li a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+header nav .search_user {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav .search_user input {
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    margin-right: 20px;
+}
+
+header nav .search_user input::placeholder {
+    color: white;
+}
+
+/* User profile pic*/
+header nav .search_user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Styling the result cards shown */
+header nav .search_user .search {
+    position: absolute;
+    width: 320px;
+    height: 270px;
+    /*border: 1px solid white;*/
+    right: 0;
+    top: 44px;
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+/* Styling the scrollbar of the search */
+header nav .search_user .search::-webkit-scrollbar {
+    width: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    visibility: hidden;
+}
+header nav .search_user .search::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+/* Making scrollbar visible only when cursor is placed on it */
+header nav .search_user .search:hover::-webkit-scrollbar {
+    visibility: visible;
+}
+header nav .search_user .search:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+header nav .search_user .search .card {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 3px 0px;
+    text-decoration: none;
+    display: none; 
+}
+
+header nav .search_user .search .card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    z-index: -1;
+}
+
+header nav .search_user .search .card img {
+    width: 20px;
+    height: 90%;
+    border-radius: 2px;
+    margin-left: 8px;
+}
+
+header nav .search_user .search .card .cont {
+    margin-left: 10px;
+    color: white;
+}
+
+header nav .search_user .search .card .cont h3 {
+    font-size: 15px;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+}
+
+header nav .search_user .search .card .cont p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+header nav .search_user .search .card .cont span {
+    background: yellow;
+    color: #000;
+    padding: 0px 3px;
+    font-weight: 700;
+    margin: 0px 5px 0px 10px;
+}
+
+header .content {
+    position: relative;
+    color: white;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px #000;
+    text-align: center;
+}
+
+header .content p {
+    font-size: 15px;
+    width: 50vw;
+    /* word-break: break-all; */
+    text-shadow: 0px 0px 10px #000;
+    text-align: center;
+}
+
+header .content .details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+header .content .details h6 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+header .content .details h5 {
+    color: rgb(142, 230, 48);
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+header .content .details h4 {
+    color: white;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+header .content .details h3 {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+header .content .details h3 span {
+    background: yellow;
+    color: #000;
+    padding: 0px 3px;
+    font-weight: 700;
+    margin: 0px 5px 0px 5px;
+
+}
+
+header .content .details h3 i {
+    margin-right: 5px;
+
+}
+
+header .content .btns {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#play,#download_main {
+    margin: 0px 10px 0px 0px;
+}
+
+header .content .btns a {
+    padding: 8px 12px;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #00bdff, #0079ff);
+    border-radius: 5px;
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+    animation: button 1s ease-in-out infinite;
+}
+
+@keyframes button {
+    0% {
+        background: linear-gradient(0deg, red, rgb(247, 108, 108));
+    }
+    12% {
+        background: linear-gradient(45deg, red, rgb(247, 108, 108));
+    }
+    24% {
+        background: linear-gradient(95deg, red, rgb(247, 108, 108));
+    }
+    36% {
+        background: linear-gradient(145deg, red, rgb(247, 108, 108));
+    }
+    48% {
+        background: linear-gradient(195deg, red, rgb(247, 108, 108));
+    }
+    60% {
+        background: linear-gradient(245deg, red, rgb(247, 108, 108));
+    }
+    72% {
+        background: linear-gradient(295deg, red, rgb(247, 108, 108));
+    }
+    100% {
+        background: linear-gradient(360deg, red, rgb(247, 108, 108));
+    }
+}
+
+header section {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 0px 50px;
+    bottom: 20px;
+    color: white;
+}
+
+header section .cards {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /*border: 1px solid white;*/
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+header section .cards::-webkit-scrollbar {
+    display: none;
+}
+
+header section .cards .card {
+    position: relative;
+    min-width: 130px;
+    height: 180px;
+    /*border: 1px solid white;*/
+    border-radius: 8px;
+    margin-right: 10px;
+    background: #000;
+    transition: .3s linear;
+}
+
+header section .cards .card .poster {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+
+header section .cards .card:hover {
+    min-width: 300px;
+    overflow: hidden;
+}
+
+header section .cards .card .rest_card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s linear;
+}
+
+header section .cards .card .rest_card img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+header section .cards .card .rest_card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Applying slightly black shades to */
+    background: linear-gradient(180deg, transparent, black);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+header section .cards .card .rest_card .cont {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    color: white;
+    padding: 0px 20px;
+}
+
+header section .cards .card .rest_card .cont .sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header section .cards .card .rest_card .cont .sub p {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+header section .cards .card .rest_card .cont .sub h3 {
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+
+header section .cards .card .rest_card .cont .sub h3 span {
+    background: yellow;
+    color: #000;
+    padding: 0px 3px;
+    font-weight: 600;
+    margin: 0px 5px 0px 10px;
+    border-radius: 3px;
+}
+
+header section .cards .card .rest_card .cont .sub h3 i {
+    margin-right: 3px;
+    
+}
+
+header section .cards .card:hover .rest_card {
+    opacity: 1;
+}
+
+header section .bi-chevron-left , .bi-chevron-right {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s linear;
+    z-index: 99999999;
+    opacity: 0;
+}
+
+header section .bi-chevron-right {
+    left: unset;
+    right: 3%;
+}
+header section:hover .bi-chevron-right {
+    opacity: 1;
+}
+header section:hover .bi-chevron-left {
+    opacity: 1;
+}
+
+

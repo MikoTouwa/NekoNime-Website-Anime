@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>NekoNime | Your Name</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="shortcut icon" href="img/logo-website.png" type="image/x-icon"/>
+</head>
+<body>
+    <header>
+        <video src="trailer/Your Name Trailer.mp4" autoplay muted loop></video>
+        <nav>
+            <div class="logo_ul">
+                <a href="./Homepage.html" input style="height:30px;width:50px;"><img src="./img/nekopoi-logo.png"  alt="Website_Logo">
+                <ul>
+                    <li>
+                        <a href="./Series.html" id="series">Series</a>
+                    </li>
+                    <li>
+                        <a href="./Movies.html" id="movies">Movies</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search_user">
+                <input type="text" placeholder="Search..." id="search_input">
+                <img src="customization/user.jpg" alt="user pic">
+                <div class="search">
+                </div>
+            </div>
+            </div>
+        </nav>
+        <div class="content">
+            <h1 id="title">Your Name</h1>
+            <p>Mitsuha Miyamizu is a high school girl living in the countryside town of Itomori. She yearns for a life in Tokyo as she is sick of living in the countryside. At the same time, Taki Tachibana, a high school student, lives in Tokyo and has a great interest in architecture, aiming to become an urban planner in the near future.</p>
+            <div class="details">
+                <h6>Anime</h6>
+                <h5 id="gen">Drama, Supernatural</h5>
+                <h4 id="date">2016</h4>
+                <h3 id="rate"><span>IMDB</span> <i class="bi bi-star-fill"></i> 8.39</h3>
+            </div>
+            <div class="btns">
+                <a href="Your Name episodes.html" id="s1">Watch Episodes</a>
+            </div>
+        </div>
+    </header>
+    <script src="./app.js"></script>
+    <script>
+        fetch(json_url).then((Response) => Response.json())
+        .then(data => {
+            let movies_array = data.filter(ele => {
+                return ele.name === "Your Name";
+            });
+            // Adding the recent data "name" from "movie.json"
+        document.getElementById("title").innerText = movies_array[0].name;
+        document.getElementById("gen").innerText = movies_array[0].genre;
+        document.getElementById("date").innerText = movies_array[0].date; 
+        document.getElementById("rate").innerHTML = `<span>IMDB</span> <i class="bi bi-star-fill"></i> ${movies_array[0].imdb}`;
+        })
+    </script>
+</body>
+</html>

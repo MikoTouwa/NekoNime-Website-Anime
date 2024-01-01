@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Series</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+    }
+
+    body>h1 {
+      text-align: center;
+      font-size: 5rem;
+    }
+
+    .container {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 30px;
+    }
+
+    .card {
+      background-color: #f30909;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+      box-shadow: 0px 0px 0px ;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 20px maroon;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .card h4 {
+      padding: 10px;
+      margin: 0;
+      font-size: 18px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: white;
+    }
+
+    @media (min-width: 601px) and (max-width: 900px) {
+      .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Series</h1>
+  <div class="container">
+    
+    <div class="card">
+        <a href="./aot.html" class="card">
+        <img src="./thumbnail/attack on titan sposter.jpeg" alt="Thumbnail">
+        <h4>Attack On Titan</h4>
+      </a>
+    </div>
+
+    <div class="card">
+        <a href="./bluelock.html" class="card">
+        <img src="./thumbnail/bluelock sposter.jpeg" alt="Thumbnail">
+        <h4>Bluelock</h4>
+      </a>
+    </div>
+
+    <div class="card">
+        <a href="./death note.html" class="card">
+        <img src="./thumbnail/Death Note sposter.jpeg" alt="Thumbnail">
+        <h4>Death Note</h4>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="./Demon Slayer.html" class="card">
+        <img src="./thumbnail/Demon Slayer sposter.jpeg" alt="Thumbnail">
+        <h4>Demon Slayer</h4>
+      </a>
+      </div>
+
+    <div class="card">
+        <a href="./jjk.html" class="card">
+        <img src="./thumbnail/Jujutsu kaisen sposter.jpeg" alt="Thumbnail">
+        <h4>Jujutsu kaisen</h4>
+      </a>
+    </div>
+
+    <div class="card">
+        <a href="./komi cant communicate.html" class="card">
+        <img src="./thumbnail/komi cant communicate sposter.jpeg" alt="Thumbnail">
+        <h4>komi cant communicate</h4>
+      </a>
+    </div>
+
+    <div class="card">
+        <a href="./love is war.html" class="card">
+        <img src="./thumbnail/love is war sposter.jpeg" alt="Thumbnail">
+        <h4>love is war</h4>
+      </a>
+    </div>
+
+    <div class="card">
+        <a href="./naruto.html" class="card">
+        <img src="./thumbnail/naruto sposter.jpeg" alt="Thumbnail">
+        <h4>Naruto</h4>
+      </a>
+    </div>
+
+    <div class="card">
+        <a href="./One Punch Man.html" class="card">
+        <img src="./thumbnail/One Punch Man sposter.jpeg" alt="Thumbnail">
+        <h4>One Punch Man</h4>
+      </a>
+    </div>
+
+    <div class="card">
+        <a href="./rezero.html" class="card">
+        <img src="./thumbnail/rezero sposter.jpeg" alt="Thumbnail">
+        <h4>Rezero</h4>
+      </a>
+    </div>
+
+    <div class="card">
+        <a href="./spyxfamily.html" class="card">
+        <img src="./thumbnail/spyxfamily sposter.jpeg" alt="Thumbnail">
+        <h4>Spyxfamily</h4>
+      </a>
+    </div>
+
+    <div class="card">
+       <a href="./vinland saga.html" class="card">
+        <img src="./thumbnail/Vinland Saga sposter.jpeg" alt="Thumbnail">
+        <h4>Vinland Saga</h4>
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>

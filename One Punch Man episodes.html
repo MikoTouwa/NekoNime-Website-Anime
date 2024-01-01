@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Episodes</title>
+  <link rel="shortcut icon" href="img/logo-website.png" type="image/x-icon"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+    }
+
+    body>h1 {
+      text-align: center;
+      font-size: 5rem;
+    }
+
+    .container {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 30px;
+    }
+
+    .card {
+      background-color: #f30909;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+      box-shadow: 0px 0px 0px ;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 20px maroon;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .card h4 {
+      padding: 10px;
+      margin: 0;
+      font-size: 18px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: white;
+    }
+
+    @media (min-width: 601px) and (max-width: 900px) {
+      .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>One Punch Man</h1>
+  <div class="container">
+    
+    <div class="card">
+        <img src="thumbnail/OPM/One Punch Man bposter.jpeg" alt="Episode 1 Thumbnail">
+        <h4>Episode 1</h4>
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
